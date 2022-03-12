@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Gojek">
+
+    <View
+        android:id="@+id/viewTopGojek"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/bg_top_rounded_gojek"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivUserGojek"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/account_circle_24"
+        app:layout_constraintBottom_toBottomOf="@id/viewTopGojek"
+        app:layout_constraintLeft_toRightOf="@id/etSearchGojek"
+        app:layout_constraintRight_toRightOf="@id/viewTopGojek"
+        app:layout_constraintTop_toTopOf="@id/viewTopGojek" />
+
+    <EditText
+        android:id="@+id/etSearchGojek"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/bg_rounded_search"
+        android:hint="\t\t\t\t\t\tCari layanan, makanan, dan tujuan"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/viewTopGojek"
+        app:layout_constraintLeft_toLeftOf="@id/viewTopGojek"
+        app:layout_constraintRight_toRightOf="@id/viewTopGojek"
+        app:layout_constraintTop_toTopOf="@id/viewTopGojek" />
+
+    <ImageView
+        android:id="@+id/ivSearchIconGojek"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/search_24"
+        app:layout_constraintBottom_toBottomOf="@id/etSearchGojek"
+        app:layout_constraintLeft_toLeftOf="@id/etSearchGojek"
+        app:layout_constraintTop_toTopOf="@id/etSearchGojek" />
+
+    <ImageView
+        android:id="@+id/ivUserMoneyGojek"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/gojek_gmbr_user_money"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTopGojek" />
+
+    <GridLayout
+        android:id="@+id/gridMenuGojek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:columnCount="4"
+        android:rowCount="2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivUserMoneyGojek">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/gojek_logo_motor" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/gojek_logo_mobil" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/gojek_logo_food" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/gojek_logo_kardus" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/gojek_logo_keranjang" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/gojek_logo_pulsa" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/gojek_logo_checkin" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/gojek_logo_lainnya" />
+
+    </GridLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardGojekSatu"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gridMenuGojek">
+
+        <ImageView
+            android:id="@+id/ivBintangGojek"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_rounded"
+            android:src="@drawable/gojek_gmbr_bintang" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="84dp"
+            android:layout_marginTop="16dp"
+            android:text="193 XP lagi ada harta karun" />
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="84dp"
+            android:layout_marginTop="36dp"
+            android:max="100"
+            android:progress="10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="84dp"
+            android:layout_marginTop="48dp"
+            android:text="Harta karun bentar lagi hilang" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvAksesCepatGojek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="6dp"
+        android:text="Akses Cepat"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardGojekSatu" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAksesCepatGojek"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAksesCepatGojek">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginTop="48dp"
+            android:background="#dcdcdc" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/gojek_logo_voucer_nganggur" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="12dp"
+            android:text="Ada voucher nganggur, nih" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="58dp"
+            android:src="@drawable/gojek_logo_restoran_terdekat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="62dp"
+            android:text="Restoran terdekat" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivPromoGojek"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/gojek__gmbr_promo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardAksesCepatGojek" />
+
+    <View
+        android:id="@+id/viewPromoGojek"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_bottom_rounded"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPromoGojek" />
+
+    <TextView
+        android:id="@+id/tvTitlePromoGojek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Festival idaman perempuan!"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/viewPromoGojek"
+        app:layout_constraintTop_toBottomOf="@id/ivPromoGojek" />
+
+    <TextView
+        android:id="@+id/tvDetailPromoGojek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Temukan kebutuhan cantik-mu hemat pakai GoPay \ndengan cashback 50%. Klik!"
+        app:layout_constraintLeft_toLeftOf="@id/tvTitlePromoGojek"
+        app:layout_constraintRight_toRightOf="view"
+        app:layout_constraintTop_toBottomOf="@id/tvTitlePromoGojek" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBottomNavGojek"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardElevation="1sp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivbotHome"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="10dp"
+        android:elevation="1dp"
+        android:src="@drawable/gojek_logo_beranda"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/ivbotPromo" />
+
+    <ImageView
+        android:id="@+id/ivbotPromo"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:elevation="1dp"
+        android:src="@drawable/gojek_logo_promo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ivbotHome"
+        app:layout_constraintRight_toLeftOf="@id/ivbotPesanan" />
+
+    <ImageView
+        android:id="@+id/ivbotPesanan"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:elevation="1dp"
+        android:src="@drawable/gojek_logo_pesanan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ivbotPromo"
+        app:layout_constraintRight_toLeftOf="@id/ivbotChat"
+
+        />
+
+    <ImageView
+        android:id="@+id/ivbotChat"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="36dp"
+        android:elevation="1dp"
+        android:src="@drawable/gojek_logo_chat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ivbotPesanan"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
